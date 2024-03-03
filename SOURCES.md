@@ -50,7 +50,7 @@
 -> https://twitter.com/brandnewday02/status/1688258393910517760
 
 ### public/kikuri/F_na9fWaMAAc4no.jpeg
--> saucenao couln't find. filename suggests it came from twitter
+-> saucenao couln't find. filename suggests it came from twitter : TBA
 
 ### public/kikuri/FjT_KxZaYAIraxK.jpeg
 -> https://twitter.com/00xzzz1202/status/1600184408665124864
@@ -68,7 +68,41 @@
 -> https://twitter.com/haluhal/status/1634603209561104384
 
 ### public/kikuri/FtF_1aAaMAAkN2M.png
--> saucenao couln't find. filename suggests it came from twitter
+-> saucenao couln't find. filename suggests it came from twitter : TBA
 
 ### public/kikuri/FviZEqbaEAAWmkm.jpeg
 -> https://twitter.com/haluhal/status/1655242061526999040
+
+### public/kikuri/FzO3-ABaMAEUNoV.jpeg
+-> https://twitter.com/goumonsha/status/1671203413839990789
+
+### public/kikuri/GD1X437aMAA1fih.jpeg
+-> Bocchi The Rock (Anime) EP 6 - "Eight Views"
+
+### public/kikuri/GENdT8gbQAAPTuL.jpeg
+-> https://danbooru.donmai.us/posts/7133277
+
+### public/kikuri/GEvZAqcbQAAAQBS.jpeg
+-> https://twitter.com/goumonsha/status/1750731535043748294
+
+### public/kikuri/GG12PBMbIAAdTkj.png
+-> https://twitter.com/ItsSoHirover/status/1760193051400753356
+-> https://twitter.com/ItsSoHirover/status/1760200477315313890
+
+### public/kikuri/GG8oaAMbMAAUBNm.jpeg
+-> https://twitter.com/ttigerrr/status/1760670411841499491
+
+### public/kikuri/GHA1D8ZaoAAIlOD.jpeg
+-> https://twitter.com/miyashi928/status/1760965804273901663
+
+### public/kikuri/GHUjsRPbMAAvW60.jpeg
+-> https://twitter.com/torako778/status/1762354703818711042
+
+### public/kikuri/GHvNjKnb0AAeChD.png
+-> TBA
+
+### public/kikuri/GHFYhipasAADq7k.jpeg
+-> https://twitter.com/torako778/status/1761286283782185328
+
+### public/kikuri/GEmc-DFb0AEbFox.png
+-> TBA
