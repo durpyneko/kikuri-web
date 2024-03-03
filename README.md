@@ -1,3 +1,3 @@
 # kikuri-web
 
-website for Hiroi Kikuri
+website of / for Hiroi Kikuri
