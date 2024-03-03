@@ -21,7 +21,15 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const directory = path.join(__dirname, "..", "..", "public", "kikuri");
+  const directory = path.join(
+    __dirname,
+    "..",
+    "..",
+    "..",
+    "..",
+    "public",
+    "kikuri"
+  );
   const randomFile = getRandomFile(directory);
   const filePath = path.join("/kikuri/", randomFile);
   res.status(200).json({ image: filePath });
