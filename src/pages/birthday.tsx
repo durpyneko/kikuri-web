@@ -16,7 +16,7 @@ export default function Birthday() {
   function updateCountdown() {
     const now = new Date();
     const targetDate = new Date(now.getFullYear(), 8, 28, 0, 0, 0);
-    if (now.getMonth() > 8 || (now.getMonth() === 8 && now.getDate() > 18)) {
+    if (now.getMonth() > 8 || (now.getMonth() === 8 && now.getDate() > 28)) {
       targetDate.setFullYear(targetDate.getFullYear() + 1);
     }
 
