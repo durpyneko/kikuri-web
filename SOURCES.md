@@ -34,3 +34,11 @@
 -> https://twitter.com/GliArtwork/status/1603261092309803008
 
 -> https://www.pixiv.net/en/artworks/103620324
+
+### public/kikuri/5d908e17c6e147144e87c0f9bcdcb05f.jpg
+-> https://twitter.com/SyHan__/status/1613305634686107648
+
+-> https://www.pixiv.net/en/artworks/104558308
+
+### public/kikuri/878ab9de58c80dd50244c99d2f33d103.jpg
+-> https://twitter.com/torako778/status/1722614758703296621
