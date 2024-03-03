@@ -29,6 +29,7 @@ export const kikuri = extendTheme({
       body: {
         backgroundColor: "background",
       },
+      color: "white",
     },
   },
 });
