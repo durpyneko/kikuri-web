@@ -42,3 +42,33 @@
 
 ### public/kikuri/878ab9de58c80dd50244c99d2f33d103.jpg
 -> https://twitter.com/torako778/status/1722614758703296621
+
+### public/kikuri/F0jq6ZBaAAAcVQh.jpeg
+-> https://twitter.com/torako778/status/1677849281510920192
+
+### public/kikuri/F23mDzGaUAAskeR.jpeg
+-> https://twitter.com/brandnewday02/status/1688258393910517760
+
+### public/kikuri/F_na9fWaMAAc4no.jpeg
+-> saucenao couln't find. filename suggests it came from twitter
+
+### public/kikuri/FjT_KxZaYAIraxK.jpeg
+-> https://twitter.com/00xzzz1202/status/1600184408665124864
+
+### public/kikuri/FkuVcEiUAAAXyNB.jpeg
+-> https://twitter.com/tsubakinoniwa/status/1606542008004534274
+
+### public/kikuri/Fm6I18NaEAAwN20.jpeg
+-> https://twitter.com/funi_mu9/status/1616379786796101633
+
+### public/kikuri/FpgX915aUAA0Bi8.jpeg
+-> https://twitter.com/marumaruru__/status/1628077883305644033
+
+### public/kikuri/Fq9GYXraUAUqnxD.jpeg
+-> https://twitter.com/haluhal/status/1634603209561104384
+
+### public/kikuri/FtF_1aAaMAAkN2M.png
+-> saucenao couln't find. filename suggests it came from twitter
+
+### public/kikuri/FviZEqbaEAAWmkm.jpeg
+-> https://twitter.com/haluhal/status/1655242061526999040
