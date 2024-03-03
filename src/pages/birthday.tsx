@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 // Chakra
-import { Center, Text, Image, useTheme } from "@chakra-ui/react";
+import { Center, Text, Image, Button, useTheme } from "@chakra-ui/react";
 
 // Components
 import Header from "@/components/Header";
@@ -10,7 +10,7 @@ import Header from "@/components/Header";
 export default function Birthday() {
   const theme = useTheme();
 
-  const [time, setTime] = useState("000");
+  const [time, setTime] = useState("0 0 0");
   const [image, setImage] = useState("");
 
   function updateCountdown() {
@@ -34,12 +34,13 @@ export default function Birthday() {
     setTime(countdown);
   }
 
+  const fetchData = async () => {
+    const data = await fetch("/api/kikuri").then((res: any) => res.json());
+    setImage(data.image);
+  };
+
   useEffect(() => {
-    const interval = setInterval(updateCountdown, 1000);
-    const fetchData = async () => {
-      const data = await fetch("/api/kikuri").then((res: any) => res.json());
-      setImage(data.image);
-    };
+    setInterval(updateCountdown, 1000);
     updateCountdown();
     fetchData();
   }, []);
@@ -59,9 +60,19 @@ export default function Birthday() {
         <Image
           src={image}
           alt="Loading Kikuri..."
-          maxH={"80vh"}
+          maxH={"73vh"}
           maxW={"90vw"}
         />
+      </Center>
+      <Center>
+        <Button
+          bg={theme.colors.accent}
+          _hover={{ bg: theme.colors.hover }}
+          m={4}
+          onClick={fetchData}
+        >
+          Refresh
+        </Button>
       </Center>
     </>
   );
