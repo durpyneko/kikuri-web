@@ -34,7 +34,7 @@ function updateSources() {
   });
 
   try {
-    fs.writeFileSync(sourcesPath, JSON.stringify(sources), "utf8");
+    fs.writeFileSync(sourcesPath, JSON.stringify(sources, null, 4), "utf8");
   } catch (error) {
     console.error("Error writing sources.json:", error);
   }
