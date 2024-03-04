@@ -30,6 +30,8 @@ export default function Birthday() {
   const [image, setImage] = useState("");
   const [source, setSource] = useState("none");
 
+  const [isImageLoading, setIsImageLoading] = useState(true);
+
   function updateCountdown() {
     const now = new Date();
     const targetDate = new Date(now.getFullYear(), 8, 28, 0, 0, 0);
@@ -52,12 +54,14 @@ export default function Birthday() {
   }
 
   useEffect(() => {
-    setInterval(updateCountdown, 1000);
+    const intervalId = setInterval(updateCountdown, 1000);
     updateCountdown();
+    return () => clearInterval(intervalId);
   }, []);
 
   useEffect(() => {
     if (data) {
+      setIsImageLoading(true);
       setImage(data.image);
       setSource(data.source);
     }
@@ -85,7 +89,13 @@ export default function Birthday() {
         </Center>
       )}
       <Center>
-        <Image src={image} alt="Image of Kikuri" maxH={"73vh"} maxW={"90vw"} />
+        <Image
+          src={image}
+          alt="Image of Kikuri"
+          maxH={"73vh"}
+          maxW={"90vw"}
+          onLoad={() => setIsImageLoading(false)}
+        />
       </Center>
       <Center pt={2} px={4}>
         <Flex direction={"column"}>
@@ -116,7 +126,7 @@ export default function Birthday() {
           _hover={{ bg: theme.colors.hover }}
           m={2}
           onClick={() => mutate("/api/kikuri")}
-          isLoading={isLoading}
+          isLoading={isLoading || isImageLoading}
           loadingText="Loading"
           spinnerPlacement="start"
         >
