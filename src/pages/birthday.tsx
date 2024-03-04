@@ -22,7 +22,9 @@ interface Kikuri {
 export default function Birthday() {
   const theme = useTheme();
 
-  const { data, error, isLoading } = useSWR<Kikuri>("/api/kikuri", fetcher);
+  const { data, error, isLoading } = useSWR<Kikuri>("/api/kikuri", fetcher, {
+    revalidateOnFocus: false,
+  });
 
   const [time, setTime] = useState("0 0 0");
   const [image, setImage] = useState("");
