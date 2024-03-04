@@ -1,33 +1,25 @@
-// Module
-const fs = require("fs");
-const path = require("path");
+import fs from "fs";
+import path from "path";
 
-// Next
-import type { NextApiRequest, NextApiResponse } from "next";
-
-// Types
 interface Source {
   image: string;
   source: string;
 }
 
-/* function getRandomFile(directory: string) {
-  const files = fs.readdirSync(directory);
-  const randomIndex = Math.floor(Math.random() * files.length);
-  const randomFile = files[randomIndex];
-  return randomFile;
-} */
-
 function updateSources() {
-  // * debug
-  // console.log("updating sources");
-  // * save images data to file
   const directory = path.join(process.cwd(), "public", "kikuri");
   const files = fs.readdirSync(directory);
 
   const sources: Source[] = [];
-  let sourcesData = fs.readFileSync("./sources.json", "utf8");
-  let parsedSources: Source[] = JSON.parse(sourcesData);
+  const sourcesPath = path.join(process.cwd(), "public", "sources.json");
+  let parsedSources: Source[] = [];
+
+  try {
+    const sourcesData = fs.readFileSync(sourcesPath, "utf8");
+    parsedSources = JSON.parse(sourcesData);
+  } catch (error) {
+    console.error("Error reading sources.json:", error);
+  }
 
   files.forEach((file: string) => {
     const image = "/kikuri/" + file;
@@ -41,25 +33,31 @@ function updateSources() {
     }
   });
 
-  fs.writeFileSync("./sources.json", JSON.stringify(sources), "utf8");
+  try {
+    fs.writeFileSync(sourcesPath, JSON.stringify(sources), "utf8");
+  } catch (error) {
+    console.error("Error writing sources.json:", error);
+  }
 
   return sources;
 }
 
 function getSources() {
-  // * debug
-  // console.log("getting sources");
-  let sourcesData = fs.readFileSync("./sources.json", "utf8");
-  let parsedSources: Source[] = JSON.parse(sourcesData);
+  const sourcesPath = path.join(process.cwd(), "public", "sources.json");
+  let parsedSources: Source[] = [];
+
+  try {
+    const sourcesData = fs.readFileSync(sourcesPath, "utf8");
+    parsedSources = JSON.parse(sourcesData);
+  } catch (error) {
+    console.error("Error reading sources.json:", error);
+  }
+
   return parsedSources;
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Source>
-) {
-  // ! only toggle on if in development and want to refresh sources.json
-  const toggle = false;
+export default function handler(req: any, res: any) {
+  const toggle = false; // toggle to true to refresh sources.json incase new images are added to fs
   const sources = toggle ? updateSources() : getSources();
 
   const randomSource = sources[Math.floor(Math.random() * sources.length)];
