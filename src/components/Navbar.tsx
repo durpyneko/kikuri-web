@@ -20,22 +20,43 @@ export default function Navbar() {
         <Center>
           <TabList>
             <NextLink href="/">
-              <Tab>Home</Tab>
+              <Tab
+                _hover={{
+                  color: theme.colors.accent,
+                  transition: "color 0.2s linear",
+                  cursor: "pointer",
+                }}
+                _selected={{ borderBottom: `${theme.colors.accent} 2px solid` }}
+              >
+                Home
+              </Tab>
             </NextLink>
             <NextLink href="/about">
-              <Tab>About</Tab>
+              <Tab
+                _hover={{
+                  color: theme.colors.accent,
+                  transition: "color 0.2s linear",
+                  cursor: "pointer",
+                }}
+                _selected={{ borderBottom: `${theme.colors.accent} 2px solid` }}
+              >
+                About
+              </Tab>
             </NextLink>
             <NextLink href="/blog">
-              <Tab>Blog</Tab>
+              <Tab
+                _hover={{
+                  color: theme.colors.accent,
+                  transition: "color 0.2s linear",
+                  cursor: "pointer",
+                }}
+                _selected={{ borderBottom: `${theme.colors.accent} 2px solid` }}
+              >
+                Blog
+              </Tab>
             </NextLink>
           </TabList>
         </Center>
-        <TabIndicator
-          mt="-1.5px"
-          height="2px"
-          bg={theme.colors.accent}
-          borderRadius="1px"
-        />
       </Tabs>
     </Box>
   );
