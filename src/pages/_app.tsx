@@ -3,6 +3,7 @@ import * as React from "react";
 
 // Next
 import type { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
 
 // Chakra
 import { Box, ChakraProvider } from "@chakra-ui/react";
@@ -19,6 +20,7 @@ const noto_sans_mono = Noto_Sans_Mono({ subsets: ["latin"] });
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={kikuri}>
+      <Analytics />
       <Box className={noto_sans_mono.className}>
         <Navbar />
         <Component {...pageProps} />
