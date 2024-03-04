@@ -1,17 +1,32 @@
 // React
 import { useEffect, useState } from "react";
+import useSWR, { mutate } from "swr";
 
 // Chakra
-import { Center, Text, Image, Button, useTheme } from "@chakra-ui/react";
+import { Center, Text, Image, Button, useTheme, Flex } from "@chakra-ui/react";
 
 // Components
 import Header from "@/components/Header";
+import Link from "next/link";
 
+// Lib
+import fetcher from "@/lib/fetcher";
+
+// Interface
+interface Kikuri {
+  image: string;
+  source: string;
+}
+
+// Main
 export default function Birthday() {
   const theme = useTheme();
 
+  const { data, error, isLoading } = useSWR<Kikuri>("/api/kikuri", fetcher);
+
   const [time, setTime] = useState("0 0 0");
   const [image, setImage] = useState("");
+  const [source, setSource] = useState("none");
 
   function updateCountdown() {
     const now = new Date();
@@ -34,16 +49,20 @@ export default function Birthday() {
     setTime(countdown);
   }
 
-  const fetchData = async () => {
-    const data = await fetch("/api/kikuri").then((res: any) => res.json());
-    setImage(data.image);
-  };
-
   useEffect(() => {
     setInterval(updateCountdown, 1000);
     updateCountdown();
-    fetchData();
   }, []);
+
+  useEffect(() => {
+    if (data) {
+      setImage(data.image);
+      setSource(data.source);
+    }
+    if (error) console.error(error.message);
+  }, [data]);
+
+  const colors = ["#a24177", theme.colors.accent]; // lighter, darker
 
   return (
     <>
@@ -56,20 +75,48 @@ export default function Birthday() {
           {time}
         </Text>
       </Center>
+      {error && (
+        <Center>
+          <Text color={theme.colors.accent}>
+            Failed to fetch data. Check console for details
+          </Text>
+        </Center>
+      )}
       <Center>
-        <Image
-          src={image}
-          alt="Loading Kikuri..."
-          maxH={"73vh"}
-          maxW={"90vw"}
-        />
+        <Image src={image} alt="Image of Kikuri" maxH={"73vh"} maxW={"90vw"} />
+      </Center>
+      <Center pt={2} px={4}>
+        <Flex direction={"column"}>
+          {/* conditional rendering for source */}
+          {source !== "none" ? (
+            source.split("\n").map((line: string, index: number) => (
+              <Center key={index}>
+                <Link href={line} target="_blank">
+                  <Text
+                    color={colors[index % colors.length]}
+                    fontSize={{ base: 18, sm: 20 }}
+                  >
+                    {line}
+                  </Text>
+                </Link>
+              </Center>
+            ))
+          ) : (
+            <Text color={theme.colors.accent} fontSize={{ base: 18, sm: 20 }}>
+              Source is not recorded in the database
+            </Text>
+          )}
+        </Flex>
       </Center>
       <Center>
         <Button
           bg={theme.colors.accent}
           _hover={{ bg: theme.colors.hover }}
-          m={4}
-          onClick={fetchData}
+          m={2}
+          onClick={() => mutate("/api/kikuri")}
+          isLoading={isLoading}
+          loadingText="Loading"
+          spinnerPlacement="start"
         >
           Refresh
         </Button>
