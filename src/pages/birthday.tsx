@@ -115,7 +115,7 @@ export default function Birthday() {
             ))
           ) : (
             <Text color={theme.colors.accent} fontSize={{ base: 18, sm: 20 }}>
-              Source is not recorded in the database
+              Source is not recorded in the database yet
             </Text>
           )}
         </Flex>
