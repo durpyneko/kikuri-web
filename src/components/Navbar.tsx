@@ -9,8 +9,11 @@ import {
   TabList,
   useTheme,
   Box,
-  Button,
+  Link,
 } from "@chakra-ui/react";
+
+// Icons
+import { FaGithub } from "react-icons/fa";
 
 export default function Navbar() {
   const theme = useTheme();
@@ -56,6 +59,15 @@ export default function Navbar() {
                 Blog
               </Tab>
             </NextLink> */}
+            <Link
+              href="https://github.com/durpyneko/kikuri-web"
+              target="_blank"
+              position={"fixed"}
+              right={0}
+              p={2}
+            >
+              <FaGithub fontSize={"26px"} />
+            </Link>
           </TabList>
         </Center>
       </Tabs>
