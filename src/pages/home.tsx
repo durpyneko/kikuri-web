@@ -2,7 +2,7 @@
 import NextLink from "next/link";
 
 // Chakra
-import { Box, Center, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 
 // Components
 import SectionBox from "@/components/SectionBox";
