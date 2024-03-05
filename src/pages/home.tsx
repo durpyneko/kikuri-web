@@ -47,7 +47,7 @@ export default function Home() {
         position={"fixed"}
         right={0}
         bottom={0}
-        src="/kikuri/GHvNJecaQAE9DQa_edit.png"
+        src="/kikuri/GHvNJecaQAE9DQa_edit-min.png"
         maxH={500}
         zIndex={-1}
       />
