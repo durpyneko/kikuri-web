@@ -144,3 +144,7 @@
 ### public/kikuri/GH0yGGsbgAAnq_V.jpeg
 
 -> https://twitter.com/torako778/status/1764621735695896708
+
+### /kikuri/116322198_p0.jpg
+
+->
