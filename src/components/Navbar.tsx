@@ -7,13 +7,14 @@ import {
   Tab,
   Tabs,
   TabList,
-  TabIndicator,
   useTheme,
   Box,
+  Button,
 } from "@chakra-ui/react";
 
 export default function Navbar() {
   const theme = useTheme();
+
   return (
     <Box marginBottom={2}>
       <Tabs position="relative" variant="unstyled">
@@ -43,7 +44,7 @@ export default function Navbar() {
                 About
               </Tab>
             </NextLink>
-            <NextLink href="/blog">
+            {/* <NextLink href="/blog">
               <Tab
                 _hover={{
                   color: theme.colors.accent,
@@ -54,7 +55,7 @@ export default function Navbar() {
               >
                 Blog
               </Tab>
-            </NextLink>
+            </NextLink> */}
           </TabList>
         </Center>
       </Tabs>

@@ -8,10 +8,11 @@ export const kikuri = extendTheme({
   },
   colors: {
     background: "#181a1b",
-    backgroundLight: "#25232d", // #25232d
+    backgroundLight: "#25232d",
     accent: "#7c325b",
     accentDark: "#491d35",
     hover: "#491d35",
+    link: "#ff6391",
   },
   components: {
     Button: {
