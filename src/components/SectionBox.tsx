@@ -21,6 +21,7 @@ export default function SectionBox({ title, clickable }: SectionBoxProps) {
         transition: "background 0.2s ease-in-out",
         cursor: clickable ? "pointer" : "not-allowed",
       }}
+      w={{ base: "90vw", sm: "auto" }}
     >
       <Center>
         <Text>{title}</Text>
