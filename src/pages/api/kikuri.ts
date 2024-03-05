@@ -26,6 +26,10 @@ function updateSources() {
     const existingSource = parsedSources.find(
       (source) => source.image === image
     );
+    // if file doesn't exist but is in database delete the database entry
+    /* if (existingSource && !fs.existsSync(path.join(directory, file))) {
+      
+    } */
     if (!existingSource) {
       sources.push({ image, source: "none" });
     } else {
@@ -57,7 +61,9 @@ function getSources() {
 }
 
 export default function handler(req: any, res: any) {
-  const toggle = false; // toggle to true to refresh sources.json incase new images are added to fs
+  // toggle to true to refresh sources.json incase new images are added to fs
+  // ! ONLY TOGGLE IN DEV
+  const toggle = false;
   const sources = toggle ? updateSources() : getSources();
 
   const randomSource = sources[Math.floor(Math.random() * sources.length)];
