@@ -108,7 +108,7 @@
 
 
 ### /kikuri/F_na9fWaMAAc4no.jpeg
--> none
+-> to be added
 
 
 ### /kikuri/GA0TUICawAA0ZXu.jpeg
@@ -132,7 +132,7 @@
 
 
 ### /kikuri/GEmc-DFb0AEbFox.png
--> none
+-> to be added
 
 
 ### /kikuri/GENdT8gbQAAPTuL.jpeg
@@ -250,8 +250,8 @@
 
 
 ### /kikuri/IsEKC4Ue.jpeg
--> none
+-> to be added
 
 
 ### /kikuri/lqUc8vpJ_400x400.jpg
--> none
+-> to be added
