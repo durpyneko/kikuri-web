@@ -22,8 +22,20 @@ export default function About() {
                 Hiroi Kikuri
               </Link>
             </Text>
+            <Text>&bull; Feature updates may take some time.</Text>
             <Text>
-              Starting updates will be semi consistent being every or other day.
+              &bull; Starting updates will be semi consistent being every or
+              other day.
+            </Text>
+            <Text>
+              &bull; I can take feature requests through{" "}
+              <Link
+                href="https://durpy.dev/socials"
+                target="_blank"
+                color={theme.colors.link}
+              >
+                Twitter or Discord
+              </Link>
             </Text>
           </Box>
           <Box mt={5}>{/* add space */}</Box>
