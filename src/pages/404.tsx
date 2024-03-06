@@ -1,5 +1,5 @@
 // Chakra
-import { Center, Image, Text, Link, VStack, Icon } from "@chakra-ui/react";
+import { Center, Image, Text, Link, VStack } from "@chakra-ui/react";
 
 // Next
 import Head from "next/head";
@@ -13,9 +13,7 @@ export default function NotFound() {
       <Center>
         <VStack>
           <Link href="/">
-            <Text fontSize={"4xl"}>
-              {"<"}go back to home page?{">"}
-            </Text>
+            <Text fontSize={"4xl"}>return to home?</Text>
           </Link>
           <Image
             alt="404"
