@@ -42,7 +42,9 @@ export default function Footer() {
       <Center>
         <Text bg={theme.colors.accent} borderTopRadius={10} px={3} py={1}>
           <Box as={"span"} mr={2}>
-            &#169;{" "}
+            <Text as={"span"} fontFamily={"verdana"}>
+              &#169;
+            </Text>{" "}
             <Link href="https://durpy.dev" target="_blank">
               durpyneko
             </Link>{" "}
