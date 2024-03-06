@@ -21,6 +21,17 @@ export default function About() {
               >
                 Hiroi Kikuri
               </Link>
+              <Text>
+                &bull; All image sources are on{" "}
+                <Link
+                  href="https://github.com/durpyneko/kikuri-web/blob/main/SOURCES.md"
+                  target="_blank"
+                  color={theme.colors.link}
+                >
+                  Github
+                </Link>
+                .
+              </Text>
             </Text>
             <Text>&bull; Feature updates may take some time.</Text>
             <Text>
